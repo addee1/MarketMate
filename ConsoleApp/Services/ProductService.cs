@@ -42,7 +42,7 @@ public class ProductService
         var productEntity = await _productRepository.GetAsync(x => x.Id == productId);
         if (productEntity == null)
         {
-            throw new KeyNotFoundException("Product not found with ID: " + productId);
+            throw new KeyNotFoundException("Produkt hittades inte med ID: " + productId);
         }
 
         productEntity.ProductName = productName;

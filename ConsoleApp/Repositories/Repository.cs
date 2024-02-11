@@ -74,13 +74,12 @@ public abstract class Repository<TEntity> where TEntity : class
     {
         try
         {
-            var exists = await _context.Set<TEntity>().AnyAsync(expression); // Use the expression parameter here
+            var exists = await _context.Set<TEntity>().AnyAsync(expression);
             return exists;
         }
         catch
         {
-            // It's usually a good idea to log exceptions or handle them in some way
-            // rather than swallowing them silently.
+            
         }
         return false;
     }

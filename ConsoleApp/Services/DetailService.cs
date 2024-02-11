@@ -61,7 +61,7 @@ public class DetailService
         var detailEntity = await _detailRepository.GetAsync(x => x.Id == detailId);
         if (detailEntity == null)
         {
-            throw new KeyNotFoundException("Detail not found with ID: " + detailId);
+            throw new KeyNotFoundException("Detalj hittas inte med ID: " + detailId);
         }
 
         detailEntity.Quantity = quantity;

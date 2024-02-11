@@ -53,7 +53,7 @@ public class CustomerService
         if (customerEntity == null)
         {
             // Om inte kunden med det angivna Id finns gör detta...
-            throw new KeyNotFoundException("Customer not found with ID: " + customerId);
+            throw new KeyNotFoundException("Kunden hittades inte med ID: " + customerId);
         }
 
         // Uppdaterar lösenordet.
